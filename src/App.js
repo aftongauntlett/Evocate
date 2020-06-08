@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   const [flipped, setFlipped] = useState([])
 
-  const handleClick = (id) => setFlipped(id)
+  const handleClick = (id) => setFlipped([ ...flipped, id])
   
   return (
   <div className="App">
@@ -15,8 +15,8 @@ function App() {
         id={1}
         width={100}
         height={100}
-        back={``}
-        front={``}
+        back={require (`./imgs/cat.jpeg`)}
+        front={require (`./imgs/cat2.jpeg`)}
         flipped={flipped.includes(1)}
         handleClick={() => handleClick(1)}
       />

@@ -19,7 +19,7 @@ export default function Card({ handleClick, id, flipped, back, front, height, wi
         className={flipped ? 'front' : 'back'}
         src={flipped ? front : back}
         />
-
+      
     </div>
   </div>
 }
