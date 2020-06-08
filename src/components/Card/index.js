@@ -3,7 +3,7 @@ import propTypes from 'prop-types'
 import './card.css'
 
 
-export default function Card({ handleClick, id, flipped, back, front, height, width }) {
+export default function Card({ handleClick, id, type, flipped, height, width }) {
   return <div
     className={`flip-container ${flipped ? 'flipped' : ''}`} 
     style={{
@@ -17,7 +17,7 @@ export default function Card({ handleClick, id, flipped, back, front, height, wi
           height, width
         }}
         className={flipped ? 'front' : 'back'}
-        src={flipped ? front : back}
+        src={flipped ? `/img/${type}.png` : `/img/cat2.jpeg`}
         />
       
     </div>
@@ -28,8 +28,7 @@ Card.propTypes = {
   handleClick: propTypes.func.isRequired,
   id: propTypes.number.isRequired,
   flipped: propTypes.bool.isRequired,
-  back: propTypes.string.isRequired,
-  front: propTypes.string.isRequired,
+  type: propTypes.string.isRequired,
   height: propTypes.number.isRequired,
   width: propTypes.number.isRequired
 }
