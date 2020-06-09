@@ -1,8 +1,9 @@
 import Navbar from "./components/Navbar";
 import React from "react";
 import Home from "./components/views/home";
-import Themes from "./components/views/themes";
-import Play from "./components/views/home";
+import Scoreboard from "./components/views/scoreBoard";
+import Gamepage from "./components/views/gamePage";
+
 // import Search from "./components/Views/Search";
 
 
@@ -17,19 +18,15 @@ export default function App() {
       {/* a switch to switch between pages */}
       <div>
         <Switch>
-
-          <Route path="/themes">
-            <Themes />
-          </Route>
-
           <Route path="/">
             <Home />
           </Route>
-
-          <Route path="/play">
-            <Play />
+          <Route path="/scoreBoard">
+            <Scoreboard />
           </Route>
-
+          <Route path="/gamePage">
+            <Gamepage />
+          </Route>
         </Switch>
       </div>
     </HashRouter>

@@ -9,13 +9,16 @@ export default class index extends Component {
     return (
   
   <Navbar bg="light" expand="lg">
-  <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+    {/* make evocate larger */}
+  <Navbar.Brand>Evocate</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
       <Nav.Link href="/">Home</Nav.Link>
-      <Nav.Link href="#/themes">Restart</Nav.Link>
-      <Nav.Link href="#link">New Game</Nav.Link>
+      <Nav.Link href="#/scoreBoard">Scoreboard</Nav.Link>
+      <Nav.Link href="#/gameOver">Game Over</Nav.Link>
+      <Nav.Link href="#/gamePage">Main Game Page</Nav.Link>
+
     </Nav>
   </Navbar.Collapse>
 </Navbar>
@@ -24,3 +27,4 @@ export default class index extends Component {
     
   }
 }
+
