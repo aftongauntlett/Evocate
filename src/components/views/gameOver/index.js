@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Form } from 'react-bootstrap'
-import "./style.css";
+import "./gameOver.css";
 
 export default class index extends Component {
   render() {
@@ -8,7 +8,7 @@ export default class index extends Component {
       <div>
       <div className="game-over-container">
         <div class="row">
-          <p>GAME OVER</p>
+          <p className="gameOverParagraph">GAME OVER</p>
         </div>
 
         <div class="row">
