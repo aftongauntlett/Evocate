@@ -2,11 +2,8 @@ import Navbar from "./components/Navbar";
 import React from "react";
 import Home from "./components/views/home";
 import Scoreboard from "./components/views/scoreBoard";
+import Gameover from "./components/views/gameOver";
 import Gamepage from "./components/views/gamePage";
-
-// import Search from "./components/Views/Search";
-
-
 import { HashRouter, Switch, Route } from "react-router-dom";
 
 export default function App() {
@@ -18,14 +15,17 @@ export default function App() {
       {/* a switch to switch between pages */}
       <div>
         <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
           <Route path="/scoreBoard">
             <Scoreboard />
           </Route>
           <Route path="/gamePage">
             <Gamepage />
+          </Route>
+          <Route path="/gameOver">
+            <Gameover />
+          </Route>
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
       </div>
