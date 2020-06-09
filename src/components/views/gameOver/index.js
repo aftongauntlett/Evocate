@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import {Jumbotron, Button, Form} from 'react-bootstrap'
-import "./styles.css";
+import { Button, Form } from 'react-bootstrap'
+import "./style.css";
 
 export default class index extends Component {
   render() {
