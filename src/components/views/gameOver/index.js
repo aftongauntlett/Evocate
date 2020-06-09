@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
-import { Button, Form } from "react-bootstrap";
-import "./style.css";
+import { Button, Form } from 'react-bootstrap'
+import "./gameOver.css";
 
 export default class index extends Component {
   onSubmit(event) {
