@@ -1,9 +1,7 @@
 .flipper {
-  border: black;
-  
+  border: black 1px solid;
 }
 
 .flip-container {
   border: black;
-  
 }

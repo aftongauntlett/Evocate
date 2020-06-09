@@ -1,28 +1,30 @@
-import React, { useState, useEffect}from "react";
-import Board from "./components/board";
-import "./App.css";
+import Navbar from "./components/Navbar";
+import React from "react";
+import Home from "./components/views/home";
+// import Discover from "./components/Views/Discover";
+// import Search from "./components/Views/Search";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
-import initializeDeck from "./deck"
-
-function App() {
-  const [cards, setCards] = useState([])
-  const [flipped, setFlipped] = useState([])
-
-  useEffect(()=> {
-    setCards(initializeDeck())
-  },[])
-  
-  const handleClick = (id) => setFlipped([ ...flipped, id])
-  
+export default function App() {
   return (
-  <div className="App">
-    
-    <h2>Memory Game</h2>
-    <Board
-      cards={cards} flipped={flipped} handleClick={handleClick}/>
-
-  </div>
-  )
+    // using this to make github pages work
+    <HashRouter basename="/">
+      {/* importing the navbar */}
+      <Navbar />
+      {/* a switch to switch between pages */}
+      <div>
+        <Switch>
+          {/* <Route path="/discover">
+          <Discover />
+        </Route>
+        <Route path="/search">
+          <Search />
+        </Route> */}
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </HashRouter>
+  );
 }
-
-export default App;
