@@ -5,17 +5,31 @@ import "./styles.css";
 export default class index extends Component {
   render() {
     return (
-    <div>
+      <div>
       <div className="game-over-container">
-      <Jumbotron>
-        <h1>GAME OVER</h1>
-          <Form 
+        <div class="row">
+          <p>GAME OVER</p>
+        </div>
+
+        <div class="row">
+          <Form>
+          <Form.Control
           type="text"
-          placeholder="Enter Name" 
-          />
-          <Button variant="primary">New Game</Button>
-  
-      </Jumbotron>
+          placeholder="Enter Name"
+          >
+          </Form.Control>
+          </Form>
+        </div>
+
+        <div class="row">
+          <Button>SUBMIT</Button>
+        </div>
+
+        <div class="row">
+          <Button>NEW GAME</Button>
+        </div>
+
+      
 
       </div>
     </div>
