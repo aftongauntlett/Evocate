@@ -1,0 +1,22 @@
+.game-over-container {
+  background-color: #030226;
+  justify-content: center;
+}
+
+h1 {
+  color: #f23869;
+  font-family: 'Megrim', cursive;
+  font-size: 50px;
+  text-align: center;
+  
+}
+
+form {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+Button {
+  background-color: #3621BF;
+  font-family: 'Megrim', cursive;
+  text-align: center;
+}
