@@ -1,8 +1,8 @@
-import React, { Component } from "./node_modules/react";
+import React, { Component } from "react";
 // import "./styles.css";
 
 export default class index extends Component {
   render() {
-    return <div>Scores!</div>;
+    return <div>Game Over!</div>;
   }
 }
