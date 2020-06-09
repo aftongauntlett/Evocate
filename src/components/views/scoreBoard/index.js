@@ -3,6 +3,6 @@ import React, { Component } from "react";
 
 export default class index extends Component {
   render() {
-    return <div>Themes Page!</div>;
+    return <div>Scores!</div>;
   }
 }
