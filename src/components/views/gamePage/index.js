@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import react from '../../../images/react.png'
 import Board from '../../Board/Board'
 import cardTop from '../../../images/blank.png'
-import cat from '../../../imgs/cat.jpeg'
+import cat from '../../../images/cat.jpg'
 
 // import "./styles.css";
 function setupCards() {
