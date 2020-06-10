@@ -2,6 +2,34 @@ import React from "react";
 import "./card.css";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 
+<<<<<<< HEAD
+
+const Card = props => {
+  const {cardImage, cardTop, flipped, onClick} = props
+  return (
+    <Flippy
+    flipOnHover={false} 
+    isFlipped={flipped}
+  
+    flipDirection="horizontal" 
+    style={{ width: '100px', height: '100px' }}
+  >
+    <FrontSide
+    onClick={onClick}
+  
+    >
+      <img src={cardTop} alt="main"/>
+    </FrontSide>
+    <BackSide
+ 
+      >
+      <img src={cardImage} alt="top"/>
+    </BackSide>
+  </Flippy>
+  
+  )
+}
+=======
 const Card = (props) => {
   const { cardImage, cardTop, flipped, onClick } = props;
   const img = flipped ? cardImage : cardTop;
@@ -36,5 +64,6 @@ const Card = (props) => {
     // </div>
   );
 };
+>>>>>>> 4574f9e2b12b71382afbf58d339bfe43e11d5974
 
 export default Card;

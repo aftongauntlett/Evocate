@@ -14,9 +14,9 @@ const Board = props => {
     if (cardsInCheckersMatched) {
       setCompleted([...completed, newCheckers[0].type])
     }
-    // if (checkersFull(newCheckers)) {
-    //   resetCheckersAfter(1000)
-    // }
+    if (checkersFull(newCheckers)) {
+      resetCheckersAfter(1000)
+    }
     function validateCheckers(checkers) {
       return checkers.length === 2 &&
         checkers[0].type === checkers[1].type
@@ -27,11 +27,11 @@ const Board = props => {
     function checkersFull(checkers) {
       return checkers.length === 2
     }
-    // function resetCheckersAfter(time) {
-    //   setTimeout(() => {
-    //     setCheckers([])
-    //   }, time)
-    // }
+    function resetCheckersAfter(time) {
+      setTimeout(() => {
+        setCheckers([])
+      }, time)
+    }
   }
 
   useEffect(() => {
@@ -42,11 +42,12 @@ const Board = props => {
         {
           ...card,
           flipped:
-            checkers.find(c => c.id === card.id) ||
+            checkers.findIndex(c => c.id === card.id)!==-1 ||
             completed.includes(card.type),
         }
         newCards.push(newCard);
       });
+   
       setCards(newCards)
     }
     // eslint-disable-next-line
