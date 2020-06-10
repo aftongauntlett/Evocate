@@ -7,7 +7,7 @@ export default class index extends Component {
   render() {
     return (
       <div className="d-flex justify-content-center">
-        <Jumbotron className="homeJumbo">
+        <Jumbotron className="homeJumbo slow">
           <h1 className="homeBlurb">Evocate</h1>
           <p className="homeParagraph">
             Evocate is a card matching game to test your memory. In a deck of
