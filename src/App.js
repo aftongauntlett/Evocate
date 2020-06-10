@@ -18,7 +18,7 @@ export default function App() {
           <Route path="/scoreBoard">
             <Scoreboard />
           </Route>
-          <Route path="/gamePage">
+          <Route path="/gamePage/:difficulty">
             <Gamepage />
           </Route>
           <Route path="/gameOver">
