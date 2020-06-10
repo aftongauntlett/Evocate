@@ -17,7 +17,7 @@ export default class index extends Component {
           </p>
           <div className="d-flex justify-content-center">
             <Button
-              href="/gamePage"
+              href="#/gamePage"
               className="homeButton"
               variant="outline-dark"
             >
