@@ -12,26 +12,45 @@
 
 p {
   color: #f23869;
-  font-family: 'Megrim', cursive;
+  font-family: "Megrim", cursive;
   font-size: 200px;
   text-align: center;
-  
 }
 
 Form {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   text-align: center;
   outline: thin;
   justify-content: center;
 }
 
 .btn-primary {
-  background-color: #3621BF !important;
-  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #3621bf !important;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 20px !important;
   text-align: center;
   justify-content: center;
   margin: 25px;
   width: 300px;
   height: 60px;
+}
+
+.element {
+  width: 100%;
+  height: 100%;
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #f23869;
+  }
+  100% {
+    background-color: #0b0340b0;
+  }
+}
+
+html,
+body {
+  height: 100%;
 }
