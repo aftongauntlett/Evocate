@@ -14,12 +14,13 @@ const Card = props => {
     // onClick={onClick}
     flipDirection="horizontal" // horizontal or vertical
     // ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-    ref={(r) => onClick()} // to use toggle method like this.flippy.toggle()
+    // ref={(r) => onClick()} // to use toggle method like this.flippy.toggle()
     // if you pass isFlipped prop component will be controlled component.
     // and other props, which will go to div
     style={{ width: '100px', height: '100px' }} /// these are optional style, it is not necessary
   >
     <FrontSide
+    onClick={onClick}
       // style={{
       //   backgroundColor: '#41669d',
       // }}
@@ -27,6 +28,7 @@ const Card = props => {
       <img src={cardTop} alt="main"/>
     </FrontSide>
     <BackSide
+    // onClick={onClick}
       // style={{ backgroundColor: '#175852'}}
       >
       <img src={cardImage} alt="top"/>
