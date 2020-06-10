@@ -7,8 +7,9 @@ export default class index extends Component {
   onSubmit(event) {
     event.preventDefault();
     axios.post("http://localhost:8080/api/score", {
-      name: event.currentTarget.name.value,
+      name:" event.currentTarget.name.value",
     });
+
   }
   render() {
     return (
@@ -16,24 +17,25 @@ export default class index extends Component {
         <div className="row">
           <p className="gameOverParagraph">GAME OVER</p>
         </div>
+          <Form onSubmit={this.onSubmit}>
 
         <div className="row">
-          <Form>
           <Form.Control
           type="text"
+          name="name"
           placeholder="Enter Name"
           >
           </Form.Control>
+        </div>
+
+        <div className="row">
+          <Button type="submit">SUBMIT</Button>
+        </div>
+
+        <div className="row">
+          <Button >NEW GAME</Button>
+        </div>
           </Form>
-        </div>
-
-        <div className="row">
-          <Button>SUBMIT</Button>
-        </div>
-
-        <div className="row">
-          <Button>NEW GAME</Button>
-        </div>
       </div>
     );
   }

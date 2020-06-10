@@ -10,12 +10,12 @@ module.exports = {
   },
 
   create: function (req, res, next) {
-    return new Promise(function (resolve, reject) {
-      console.log(req);
+
+      console.log(req.body);
       db.Score.create(req.body).then(function (result) {
         res.json({ result: "success", data: result });
       });
-    });
+
   },
 
   update: function (req, res, next) {
