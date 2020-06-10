@@ -12,22 +12,21 @@
 
 p {
   color: #f23869;
-  font-family: 'Megrim', cursive;
+  font-family: "Megrim", cursive;
   font-size: 200px;
   text-align: center;
-  
 }
 
 Form {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   text-align: center;
   outline: thin;
   justify-content: center;
 }
 
 .btn-primary {
-  background-color: #3621BF !important;
-  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #3621bf !important;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 20px !important;
   text-align: center;
   justify-content: center;
