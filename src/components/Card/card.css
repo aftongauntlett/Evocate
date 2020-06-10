@@ -1,7 +1,12 @@
-.flipper {
-  border: black 1px solid;
+.Card{
+  flex: 1
 }
 
-.flip-container {
-  border: black;
+.Card:hover{
+  cursor: pointer;
+}
+
+.Card img, .flippy-cardContainer  img{
+  width: 100px;
+  height: 100px;
 }
