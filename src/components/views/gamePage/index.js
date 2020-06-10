@@ -42,7 +42,7 @@ function suffle(cardList) {
     cardList[i] = copyRandom
     cardList[randomCard] = copyCurrent
   }
-  console.log(cardList)
+
   return cardList
 }
 

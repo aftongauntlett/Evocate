@@ -47,16 +47,7 @@ const Board = props => {
         }
         newCards.push(newCard);
       });
-      console.log("newCards")
-      console.log(newCards)
-      if (checkers) {
-        console.log("checkers")
-        console.log(checkers)
-      }
-      if (completed) {
-        console.log("completed")
-        console.log(completed)
-      }
+   
       setCards(newCards)
     }
     // eslint-disable-next-line
