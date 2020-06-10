@@ -11,53 +11,18 @@
   font-family: "Noto Sans JP", sans-serif;
   font-size: 20px;
   padding: 15px;
-  text-align: left;
+  text-align: rcenteright;
 }
-
-/* .homeJumbo {
-  margin: 20px;
-  padding: 20px;
-  background-image: url(../../../imgs/neon.jpg);
-  background-size: cover;
-  background-position: bottom;
-  margin-top: 50px;
-  height: 60vh;
-  width: 140vh;
-} */
 
 .homeJumbo {
-  background-image: url(../../../imgs/neon.jpg);
-  background-size: cover;
-  background-position: bottom;
-  margin-top: 50px;
-  height: 60vh;
-  width: 140vh;
   margin: 20px;
   padding: 20px;
-  height: 60vh;
+  background-image: url(../home/images/neon.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-top: 50px;
+  height: 70vh;
   width: 140vh;
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .fadeIn {
@@ -79,7 +44,7 @@
 
 @media only screen and (max-width: 800px) {
   .homeJumbo {
-    background-image: url(../../../imgs/neon.jpg);
+    background-image: url(../home/images/neon.jpg);
     background-size: cover;
     background-position: right;
     height: 65vh;
