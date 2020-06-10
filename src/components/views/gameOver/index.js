@@ -7,11 +7,11 @@ export default class index extends Component {
     return (
       <div>
       <div className="game-over-container">
-        <div class="row">
+        <div className="row">
           <p className="gameOverParagraph">GAME OVER</p>
         </div>
 
-        <div class="row">
+        <div className="row">
           <Form>
           <Form.Control
           type="text"
@@ -21,11 +21,11 @@ export default class index extends Component {
           </Form>
         </div>
 
-        <div class="row">
+        <div className="row">
           <Button>SUBMIT</Button>
         </div>
 
-        <div class="row">
+        <div className="row">
           <Button>NEW GAME</Button>
         </div>
 
