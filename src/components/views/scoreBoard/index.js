@@ -7,11 +7,11 @@ export default class index extends Component {
     return (
     <div>
       <div className="scoreboard-container">
-        <div class="row">
+        <div className="row">
           <p className="scoreboardParagraph">SCOREBOARD</p>
         </div>
           
-          <div class="row">
+          <div className="row">
           <Table striped bordered hover>
             <thead>
               <tr>
@@ -28,7 +28,7 @@ export default class index extends Component {
           </Table>
           </div>
 
-        <div class="row">
+        <div className="row">
           <Button>NEW GAME</Button>
         </div>
 

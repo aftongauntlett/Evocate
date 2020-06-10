@@ -12,29 +12,27 @@ export default class index extends Component {
   }
   render() {
     return (
-      <div>
-        <div className="game-over-container">
-          <div className="row">
-            <p>GAME OVER</p>
-          </div>
+      <div className="game-over-container">
+        <div className="row">
+          <p className="gameOverParagraph">GAME OVER</p>
+        </div>
 
-          <Form onSubmit={this.onSubmit}>
-            <div className="row">
-              <Form.Control
-                type="text"
-                name="name"
-                placeholder="Enter Name"
-              ></Form.Control>
-            </div>
-
-            <div className="row">
-              <Button type="submit">SUBMIT</Button>
-            </div>
-
-            <div className="row">
-              <Button>NEW GAME</Button>
-            </div>
+        <div className="row">
+          <Form>
+          <Form.Control
+          type="text"
+          placeholder="Enter Name"
+          >
+          </Form.Control>
           </Form>
+        </div>
+
+        <div className="row">
+          <Button>SUBMIT</Button>
+        </div>
+
+        <div className="row">
+          <Button>NEW GAME</Button>
         </div>
       </div>
     );
