@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import "./style.css";
 
 export default class index extends Component {

@@ -55,12 +55,18 @@ Table {
 
 
 .btn-primary {
-  background-color: #3621BF !important;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 20px !important;
+  background-color: #0b0340e1 !important;
+  color: #f23869 !important;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 30px !important;
   text-align: center;
   justify-content: center;
   margin: 25px;
-  width: 300px;
-  height: 60px;
+  width: 250px;
+  height: 100px;
+}
+
+html,
+body {
+  height: 100%;
 }
