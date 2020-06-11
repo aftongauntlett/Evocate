@@ -12,19 +12,15 @@ export default class index extends Component {
     if (!this.state.starting) {
       return (
         <div className="d-flex justify-content-center">
-          <div className="flip-container">
-            <div className="flipper">
-              <Button
-                onClick={() => {
-                  this.setState({ starting: true });
-                }}
-                className="homeButton"
-                variant="outline-dark"
-              >
-                Start
-              </Button>
-            </div>
-          </div>
+          <Button
+            onClick={() => {
+              this.setState({ starting: true });
+            }}
+            className="homeButton"
+            variant="outline-dark"
+          >
+            Start
+          </Button>
         </div>
       );
     }
