@@ -29,16 +29,25 @@ export default class index extends Component {
               placeholder="Enter Name"
             ></Form.Control>
           </div>
-
-          <div className="row">
-            <Button type="submit">SUBMIT</Button>
-          </div>
-
-          <div className="row">
-            <Button href="/">NEW GAME</Button>
-          </div>
         </Form>
-      </div>
+
+        <div className="flip-container">
+          <div className="flipper">
+            <div className="row">
+              <Button type="submit">SUBMIT</Button>
+            </div>
+          </div>
+        </div>
+        
+        <div className="flip-container">
+          <div className="flipper">
+            <div className="row">
+              <Button href="/">NEW GAME</Button>
+            </div>
+          </div>
+        </div>
+      
+    </div>
     );
   }
 }

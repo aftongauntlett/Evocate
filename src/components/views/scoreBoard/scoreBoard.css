@@ -19,6 +19,16 @@
   flex-wrap: wrap;
 }
 
+@media only screen and (max-width: 700px) {
+  .scoreboardParagraph {
+    color: #f23869;
+    font-family: 'Megrim', cursive;
+    font-size: 80px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+}
+
 th {
   color: #f23869;
   font-family: 'Megrim', cursive;
@@ -33,9 +43,7 @@ Table {
   outline: thin;
   justify-content: center;
   margin: 25px;
-
 }
-
 
 .btn-primary {
   background-color: #0b0340e1 !important;
@@ -45,9 +53,31 @@ Table {
   text-align: center;
   justify-content: center;
   margin: 45px;
-  padding: 15px;
   width: 250px;
   height: 100px;
+}
+
+.flipper {
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+  -ms-transition: 0.6s;
+  -ms-transform-style: preserve-3d;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper,
+#flip-toggle.flip .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  filter: FlipH;
+  -ms-filter: "FlipH";
 }
 
 html,
