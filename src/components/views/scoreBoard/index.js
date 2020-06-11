@@ -27,13 +27,18 @@ export default class index extends Component {
             </tbody>
           </Table>
           </div>
-
-        <div className="row">
-          <Button>NEW GAME</Button>
-        </div>
-
-        </div>
       </div>
+
+
+        <div className="flip-containter">
+          <div className="flipper">
+            <div className="row">
+              <Button href="/">NEW GAME</Button>
+            </div>
+          </div>
+        </div>
+
+    </div>
     );
   }
 }
