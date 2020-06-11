@@ -3,6 +3,8 @@ import react from '../../../images/react.png'
 import Board from '../../Board/Board'
 import cardTop from '../../../images/blank.png'
 import cat from '../../../images/cat.jpg'
+import Timer from './timer'
+
 
 // import "./styles.css";
 function setupCards() {
@@ -51,9 +53,14 @@ export default class index extends Component {
     const cards = setupCards()
     return (
       <div className="App">
+       <Timer active={true} />
         <Board cards={cards} />
       </div>
     )
     // return <div>Main Game!</div>;
   }
 }
+
+
+
+
