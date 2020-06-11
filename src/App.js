@@ -4,6 +4,7 @@ import Home from "./components/views/home";
 import Scoreboard from "./components/views/scoreBoard";
 import Gameover from "./components/views/gameOver";
 import Gamepage from "./components/views/gamePage";
+import Themes from "./components/views/themes/index";
 import { HashRouter, Switch, Route } from "react-router-dom";
 
 export default function App() {
@@ -23,6 +24,9 @@ export default function App() {
           </Route>
           <Route path="/gameOver">
             <Gameover />
+          </Route>
+          <Route path="/themes">
+            <Themes />
           </Route>
           <Route path="/">
             <Home />
