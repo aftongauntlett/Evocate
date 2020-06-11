@@ -29,28 +29,42 @@ export default class index extends Component {
   difficultySelector() {
     if (this.state.starting) {
       return (
-        <div className="d-flex justify-content-center">
-          <Button
-            href="#/gamePage/12"
-            className="homeButton"
-            variant="outline-dark"
-          >
-            Easy
-          </Button>
-          <Button
-            href="#/gamePage/24"
-            className="homeButton"
-            variant="outline-dark"
-          >
-            Medium
-          </Button>
-          <Button
-            href="#/gamePage/36"
-            className="homeButton"
-            variant="outline-dark"
-          >
-            Hard
-          </Button>
+        <div className="d-flex justify-content-center flex-wrap">
+          <div className="flip-container">
+            <div className="flipper">
+              <Button
+                href="#/gamePage/12"
+                className="homeButton"
+                variant="outline-dark"
+              >
+                Easy
+              </Button>
+            </div>
+          </div>
+
+          <div className="flip-container">
+            <div className="flipper">
+              <Button
+                href="#/gamePage/24"
+                className="homeButton"
+                variant="outline-dark"
+              >
+                Medium
+              </Button>
+            </div>
+          </div>
+
+          <div className="flip-container">
+            <div className="flipper">
+              <Button
+                href="#/gamePage/36"
+                className="homeButton"
+                variant="outline-dark"
+              >
+                Hard
+              </Button>
+            </div>
+          </div>
         </div>
       );
     }

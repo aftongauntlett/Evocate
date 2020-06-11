@@ -22,9 +22,6 @@ export default class index extends Component {
             <Nav.Link className="navbarFont" href="#/gameOver">
               Game Over
             </Nav.Link>
-            <Nav.Link className="navbarFont" href="#/gamePage">
-              Main Game Page
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
