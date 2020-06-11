@@ -8,7 +8,7 @@ router.get("/score", function (req, res, next) {
 });
 
 router.post("/score", function (req, res, next) {
-  console.log(req.body);
+  console.log(req.params);
   return scoreController.create(req, res, next);
 });
 

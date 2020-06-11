@@ -3,6 +3,9 @@ var db = require("./models");
 var app = express();
 var cors = require("cors");
 app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 var PORT = process.env.PORT || 8080;
 const apiRoutes = require("./routes/api-routes");
 
