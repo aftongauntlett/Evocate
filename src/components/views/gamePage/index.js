@@ -49,12 +49,43 @@ function suffle(cardList) {
 }
 
 export default class index extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      finalTime: null,
+      running: true
+    }
+
+
+  }
+
+  componentDidMount() {
+    // let seconds = 0
+    // let interval = setInterval(() => {
+    //   seconds++
+    //   console.log(seconds)
+    //   if (seconds === 3){
+    //     clearInterval(interval)
+    //     this.setState({running: false})
+    //   }
+    // }, 1000)
+  }
+
+  setFinalTime(time){
+    this.setState({finalTime: time})
+  }
+
   render() {
     const cards = setupCards()
     return (
       <div className="App">
-       <Timer active={true} />
+       <Timer running={this.state.running} setFinalTime={this.setFinalTime.bind(this)} />
         <Board cards={cards} />
+        {
+          this.state.finalTime !== null ? (
+            <p style={{fontSize: '20px', color: 'white'}}>Final Time: {this.state.finalTime}</p>
+          ) : ''
+        }
       </div>
     )
     // return <div>Main Game!</div>;
