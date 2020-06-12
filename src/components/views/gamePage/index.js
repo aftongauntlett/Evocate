@@ -5,9 +5,12 @@ import cardTop from '../../../images/blank.png'
 import cat from '../../../images/cat.jpg'
 import Timer from './timer'
 
-
 // import "./styles.css";
-function setupCards() {
+function setupCards(props) {
+  console.log("setupCards")
+  console.log(props)
+  let theme = props.theme
+  // console.log(count)
   let id = 1
   function importAll(r) {
     return r.keys().map(r);
@@ -25,6 +28,9 @@ function setupCards() {
       cardImage: cat
     }]
   }
+  // TODO: random images from rest api
+  if (theme == 'random')
+    theme = 'default'
 
   themes['pokemon'] = Object.keys(imagesPoke).reduce((result, item) => {
     const getCard = () => ({
@@ -37,8 +43,8 @@ function setupCards() {
     // console.log(getCard())
     return [...result, getCard()]
   })
-  id = 0;
-  themes['super'] = Object.keys(imagesSuper).reduce((result, item) => {
+  id = 1;
+  themes['superheroes'] = Object.keys(imagesSuper).reduce((result, item) => {
     const getCard = () => ({
       id: id++,
       type: item,
@@ -50,8 +56,8 @@ function setupCards() {
     return [...result, getCard()]
   })
   const cards = []
-  id = 0;
-  themes['super'].forEach(image => {
+  id = 1;
+  themes[theme].forEach(image => {
     let card = {
       id: id,
       type: image.type,
@@ -86,7 +92,7 @@ function suffle(cardList) {
 
 export default class index extends Component {
   render() {
-    const cards = setupCards()
+    const cards = setupCards(this.props)
     return (
       <div className="App">
         <Timer active={true} />
