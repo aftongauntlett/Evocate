@@ -1,12 +1,17 @@
-.Card{
-  flex: 1
+.Card {
+  flex: 1;
 }
 
-.Card:hover{
+.Card:hover {
   cursor: pointer;
 }
 
-.Card img, .flippy-cardContainer  img{
+.Card img,
+.flippy-cardContainer img {
   width: 100px;
   height: 100px;
+}
+
+.my-flippy {
+  margin: 20px;
 }
