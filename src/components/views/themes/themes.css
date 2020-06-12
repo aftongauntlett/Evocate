@@ -27,7 +27,6 @@
     text-align: center;
     justify-content: center;
   }
-  
 }
 
 .poke-card {
@@ -45,13 +44,21 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
 
+.random-card {
+  background-image: url(./images/question.jpg);
+  margin: 25px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: center;
 }
 
 .poke-button,
 .hero-button,
 .random-button {
-  background-color: #0b0340e1 !important;
+  background-color: #0b0340d0 !important;
   color: #f23869 !important;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 30px !important;
