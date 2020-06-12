@@ -8,48 +8,45 @@ export default class Timer extends Component {
             minutes: 0,
             hours: 0,
             active: false,
-            interval: null
         }
+        this.interval = null
     }
 
     startTimer(){
-        let { active, interval, seconds, minutes, hours} = this.state;
+        let { active, seconds, minutes, hours} = this.state;
 
-        const updateTimer = () => {
-
-            seconds++
-            if(seconds === ''){
-                this.stopTimer()
-                clearInterval(interval)
-            }
-            if (seconds === 60) {
-                minutes++;
-                seconds = 0;
-            }
-            if (minutes === 60) {
-                hours++;
-                minutes = 0;
-            }
-            this.setState({seconds,minutes,hours, interval})
-        }
-
-        if (active === false && interval === null) {
-            interval = setInterval(updateTimer, 1000);
+        if (active === false && this.interval === null) {
+            this.interval= setInterval(() => {
+                    if(this.props.running){
+                        seconds++
+                        // if(seconds === 15){
+                        //     this.stopTimer()
+                        // }
+                        if (seconds === 60) {
+                            minutes++;
+                            seconds = 0;
+                        }
+                        if (minutes === 60) {
+                            hours++;
+                            minutes = 0;
+                        }
+                        this.setState({seconds,minutes,hours})
+                    } else {
+                        this.stopTimer()
+                    }
+                
+            }, 1000);
         };
     }
 
     stopTimer(){
-        clearInterval(this.state.interval)
-    }
-
-    getTime(){
-        // return time
-        return '0 hours'
+        clearInterval(this.interval);
+        this.props.setFinalTime(`${this.state.minutes} Minutes ${this.state.seconds} Seconds`)
     }
 
     render() {
-      const { active } = this.props;
-      if (active && !this.state.active) {
+      const { running } = this.props;
+      if (running && !this.state.active) {
         this.startTimer();
       } 
       return (
@@ -61,26 +58,4 @@ export default class Timer extends Component {
   }
 
 
-//   let second = 0;
-//   let minute = 0;
-//   let hour = 0;
-//   let timer = document.querySelector('.timer');
-//   timer.innerHTML = '0 mins 0 secs';
-
-
-
-// function startTimer() {
-//   interval = setInterval(function() {
-//     timer.innerHTML = minute + ' mins ' + second + ' secs';
-//     second++;
-//     if (second == 60) {
-//       minute++;
-//       second = 0;
-//     }
-//     if (minute == 60) {
-//       hour++;
-//       minute = 0;
-//     }
-//   }, 1000);
-// }
 
