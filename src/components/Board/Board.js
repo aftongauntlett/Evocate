@@ -5,6 +5,7 @@ import './Board.css'
 const Board = props => {
   const [cards, setCards] = useState(props.cards)
   const [checkers, setCheckers] = useState([])
+  const [loading, setLoading] = useState(true)
   const [completed, setCompleted] = useState([])
   const onCardClick = card => () => {
     if (checkersFull(checkers) || cardAlreadyInCheckers(checkers, card)) return
@@ -42,12 +43,12 @@ const Board = props => {
         {
           ...card,
           flipped:
-            checkers.findIndex(c => c.id === card.id)!==-1 ||
+            checkers.findIndex(c => c.id === card.id) !== -1 ||
             completed.includes(card.type),
         }
         newCards.push(newCard);
       });
-   
+
       setCards(newCards)
     }
     // eslint-disable-next-line
@@ -55,9 +56,30 @@ const Board = props => {
 
   return (
     <div className="Board">
-      {cards.map(card => (
-        <Card {...card} onClick={onCardClick(card)} key={card.id} />
-      ))}
+      {/* {loading && (
+        <div className="spinner">
+          <div>
+            <img src={spinner} />
+          </div>
+          <span>Loading game...</span>
+        </div>
+      )} */}
+
+      {loading && (
+        <>
+          {/* <div className="statistics">
+            <span>Turns: {turns}</span>
+            <span>Pairs: {pairsMatched} of {pairs}</span>
+
+            {pairsMatched === pairs && (
+              <button onClick={resetGame}>New game</button>
+            )}
+          </div> */}
+          {cards.map(card => (
+            <Card {...card} onClick={onCardClick(card)} key={card.id} />
+          ))}
+        </>
+      )}
     </div>
   )
 }

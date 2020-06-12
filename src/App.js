@@ -3,7 +3,7 @@ import React from "react";
 import Home from "./components/views/home";
 import Scoreboard from "./components/views/scoreBoard";
 import Gameover from "./components/views/gameOver";
-import Gamepage from "./components/views/gamePage";
+// import Gamepage from "./components/views/gamePage";
 import Themes from "./components/views/themes/index";
 import { HashRouter, Switch, Route } from "react-router-dom";
 
@@ -20,14 +20,14 @@ export default function App() {
             <Scoreboard />
           </Route>
           <Route path="/gamePage/:difficulty">
-            <Gamepage />
+            <Themes />
           </Route>
           <Route path="/gameOver">
             <Gameover />
           </Route>
-          <Route path="/themes">
+          {/* <Route path="/themes">
             <Themes />
-          </Route>
+          </Route> */}
           <Route path="/">
             <Home />
           </Route>

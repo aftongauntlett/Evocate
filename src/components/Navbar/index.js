@@ -16,9 +16,9 @@ export default class index extends Component {
             <Nav.Link className="navbarFont" href="/">
               Home
             </Nav.Link>
-            <Nav.Link className="navbarFont" href="#/themes">
+            {/* <Nav.Link className="navbarFont" href="#/themes">
               Themes
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link className="navbarFont" href="#/scoreBoard">
               Scoreboard
             </Nav.Link>

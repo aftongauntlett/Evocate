@@ -5,28 +5,69 @@ import cardTop from '../../../images/blank.png'
 import cat from '../../../images/cat.jpg'
 import Timer from './timer'
 
-
 // import "./styles.css";
-function setupCards() {
+function setupCards(props) {
+  console.log("setupCards")
+  console.log(props)
+  let theme = props.theme
+  // console.log(count)
   let id = 1
-  const images = [{
-    type: 'react',
-    img: react
-  }, {
-    type: 'cat',
-    img: cat
-  }]
+  function importAll(r) {
+    return r.keys().map(r);
+  }
+
+  const imagesPoke = importAll(require.context('../themes/images/pokemon-images', false, /\.(png|jpe?g|svg)$/));
+  const imagesSuper = importAll(require.context('../themes/images/superhero-images', false, /\.(png|jpe?g|svg)$/));
+
+  const themes = {
+    "default": [{
+      type: 'react',
+      cardImage: react
+    }, {
+      type: 'cat',
+      cardImage: cat
+    }]
+  }
+  // TODO: random images from rest api
+  if (theme == 'random')
+    theme = 'default'
+
+  themes['pokemon'] = Object.keys(imagesPoke).reduce((result, item) => {
+    const getCard = () => ({
+      id: id++,
+      type: item,
+      cardTop,
+      cardImage: imagesPoke[item],
+      flipped: false,
+    })
+    // console.log(getCard())
+    return [...result, getCard()]
+  })
+  id = 1;
+  themes['superheroes'] = Object.keys(imagesSuper).reduce((result, item) => {
+    const getCard = () => ({
+      id: id++,
+      type: item,
+      cardTop,
+      cardImage: imagesSuper[item],
+      flipped: false,
+    })
+    // console.log(getCard())
+    return [...result, getCard()]
+  })
   const cards = []
-  images.forEach(image => {
+  id = 1;
+  themes[theme].forEach(image => {
     let card = {
       id: id,
       type: image.type,
       cardTop,
-      cardImage: image.img,
+      cardImage: image.cardImage,
       flipped: false
     }
     id++;
     cards.push(card)
+    console.log(card)
     card = JSON.parse(JSON.stringify(card))
     card.id = id
     cards.push(card)
@@ -34,6 +75,7 @@ function setupCards() {
   });
   return suffle(cards)
 }
+
 
 function suffle(cardList) {
   let len = cardList.length
@@ -76,7 +118,7 @@ export default class index extends Component {
   }
 
   render() {
-    const cards = setupCards()
+    const cards = setupCards(this.props)
     return (
       <div className="App">
        <Timer running={this.state.running} setFinalTime={this.setFinalTime.bind(this)} />
