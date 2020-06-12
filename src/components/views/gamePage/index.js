@@ -64,9 +64,9 @@ export default class index extends Component {
     // let interval = setInterval(() => {
     //   seconds++
     //   console.log(seconds)
-    //   if (seconds === 3){
+    //   if (seconds === 10) {
     //     clearInterval(interval)
-    //     this.setState({running: false})
+    //     this.setState({ running: false })
     //   }
     // }, 1000)
   }

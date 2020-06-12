@@ -19,9 +19,9 @@ export default class Timer extends Component {
             this.interval= setInterval(() => {
                     if(this.props.running){
                         seconds++
-                        if(seconds === 4){
-                            this.stopTimer()
-                        }
+                        // if(seconds === 15){
+                        //     this.stopTimer()
+                        // }
                         if (seconds === 60) {
                             minutes++;
                             seconds = 0;
@@ -41,7 +41,7 @@ export default class Timer extends Component {
 
     stopTimer(){
         clearInterval(this.interval);
-        this.props.setFinalTime(`${this.state.hours} hours, ${this.state.seconds} seconds`)
+        this.props.setFinalTime(`${this.state.minutes} Minutes ${this.state.seconds} Seconds`)
     }
 
     render() {
