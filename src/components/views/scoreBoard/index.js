@@ -15,7 +15,7 @@ export default class index extends Component {
             <Table striped bordered hover>
               <thead>
                 <tr>
-                  <th className="scoreboardFont">First Name</th>
+                  <th className="scoreboardFont">Name</th>
                   <th className="scoreboardFont">Score</th>
                 </tr>
               </thead>

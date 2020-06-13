@@ -53,7 +53,7 @@ export default class Timer extends Component {
     }
     return (
       <div className="d-flex justify-content-center">
-        <div className="gradient-border" id="box">
+        <div className="gradient-border d-flex justify-content-center" id="box">
           Timer: {this.state.minutes} Minutes {this.state.seconds} Seconds
         </div>
       </div>

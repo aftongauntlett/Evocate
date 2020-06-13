@@ -13,10 +13,14 @@ const Card = (props) => {
       style={{ width: "100px", height: "100px" }}
     >
       <FrontSide onClick={onClick}>
-        <img src={cardTop} alt="main" />
+        <img
+          className="cardBorder"
+          src="https://i.dlpng.com/static/png/6985230_preview.png"
+          alt="main"
+        />
       </FrontSide>
       <BackSide>
-        <img src={cardImage} alt="top" />
+        <img className="cardBorder" src={cardImage} alt="top" />
       </BackSide>
     </Flippy>
   );

@@ -36,7 +36,6 @@ export default withRouter(
       const { theme, cardCount } = this.state;
       return (
         <div>
-          {theme}
           {theme && <Gamepage theme={theme} cardCount={cardCount} />}
           {!theme && (
             <div className="themes-container">

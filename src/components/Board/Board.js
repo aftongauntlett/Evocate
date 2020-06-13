@@ -73,9 +73,9 @@ const Board = (props) => {
               <button onClick={resetGame}>New game</button>
             )}
           </div> */}
-          <div className="row w-75">
+          <div className="row">
             {cards.map((card) => (
-              <div className="col-sm-6 col-md-3 col-lg-2 d-flex justify-content-center my-5">
+              <div className="col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center my-5">
                 <Card {...card} onClick={onCardClick(card)} key={card.id} />
               </div>
             ))}
