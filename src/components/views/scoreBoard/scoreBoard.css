@@ -13,32 +13,43 @@
 
 .scoreboardParagraph {
   color: #f23869;
-  font-family: 'Megrim', cursive;
+  font-family: "Megrim", cursive;
   font-size: 100px;
   text-align: center;
   flex-wrap: wrap;
 }
 
+.scoreButton {
+  background-color: #0b0340e1 !important;
+  color: #f23869 !important;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 20px !important;
+  text-align: center;
+  justify-content: center;
+  /* margin: 45px;
+  width: 250px;
+  height: 100px; */
+}
+
 @media only screen and (max-width: 700px) {
   .scoreboardParagraph {
     color: #f23869;
-    font-family: 'Megrim', cursive;
+    font-family: "Megrim", cursive;
     font-size: 80px;
     text-align: center;
     flex-wrap: wrap;
   }
 }
 
-th {
+.scoreboardFont {
   color: #f23869;
-  font-family: 'Megrim', cursive;
+  font-family: "Megrim", cursive;
   font-size: 30px;
   text-align: center;
-
 }
 
 Table {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   text-align: center;
   outline: thin;
   justify-content: center;

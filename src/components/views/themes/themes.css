@@ -27,27 +27,9 @@
     text-align: center;
     justify-content: center;
   }
-  
 }
 
-.poke-card {
-  background-image: url(./images/pokemon-images/Squirtle.jpg);
-  margin: 25px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.hero-card {
-  background-image: url(./images/superhero-images/Batman.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-}
-
+.create-button,
 .poke-button,
 .hero-button,
 .random-button {
@@ -61,32 +43,4 @@
   padding: auto;
   width: 350px;
   height: 100px;
-}
-
-.flipper {
-  -webkit-transition: 0.6s;
-  -webkit-transform-style: preserve-3d;
-  -moz-transition: 0.6s;
-  -moz-transform-style: preserve-3d;
-  -ms-transition: 0.6s;
-  -ms-transform-style: preserve-3d;
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-}
-
-.flip-container:hover .flipper,
-.flip-container.hover .flipper,
-#flip-toggle.flip .flipper {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  filter: FlipH;
-  -ms-filter: "FlipH";
-}
-
-html,
-body {
-  height: 100%;
 }
