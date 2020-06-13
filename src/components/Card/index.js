@@ -12,12 +12,22 @@ const Card = (props) => {
       flipDirection="horizontal"
       style={{ width: "100px", height: "100px" }}
     >
-      <FrontSide onClick={onClick}>
-        <img src={cardTop} alt="main" />
-      </FrontSide>
-      <BackSide>
-        <img src={cardImage} alt="top" />
-      </BackSide>
+      <div className="container">
+        <div className="box">
+          <FrontSide onClick={onClick}>
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img src={cardTop} alt="main" />
+          </FrontSide>
+          <BackSide>
+            <img src={cardImage} alt="top" />
+          </BackSide>
+        </div>
+      </div>
     </Flippy>
   );
 };
