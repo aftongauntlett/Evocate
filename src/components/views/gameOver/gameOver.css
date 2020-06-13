@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   flex-flow: column wrap;
 }
+
 .row {
   justify-content: center;
 }
@@ -36,6 +37,7 @@ Form {
   width: 300px;
 }
 
+<<<<<<< HEAD
 .gameOverParagraph {
   color: #f23869;
   font-family: "Megrim", cursive;
@@ -43,6 +45,8 @@ Form {
   text-align: center;
 }
 
+=======
+>>>>>>> API call and more pictures
 th {
   color: #f23869;
   font-family: "Megrim", cursive;
