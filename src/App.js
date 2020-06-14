@@ -1,3 +1,4 @@
+import Favicon from "react-favicon";
 import Navbar from "./components/Navbar";
 import React from "react";
 import Home from "./components/views/home";
@@ -6,6 +7,8 @@ import Gameover from "./components/views/gameOver";
 // import Gamepage from "./components/views/gamePage";
 import Themes from "./components/views/themes/index";
 import { HashRouter, Switch, Route } from "react-router-dom";
+import Footer from "./components/views/footer";
+
 
 export default function App() {
   return (
@@ -15,6 +18,8 @@ export default function App() {
       <Navbar />
       {/* a switch to switch between pages */}
       <div>
+      <Favicon />
+
         <Switch>
           <Route path="/scoreBoard">
             <Scoreboard />
@@ -32,7 +37,11 @@ export default function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </HashRouter>
+
+   
+
   );
 }

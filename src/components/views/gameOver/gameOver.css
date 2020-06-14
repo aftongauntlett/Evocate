@@ -65,6 +65,7 @@ Table {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 30px !important;
   text-align: center;
+  border-radius: 12px;
   margin: 25px;
   padding: auto;
   width: 250px;
