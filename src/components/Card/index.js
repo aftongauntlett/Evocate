@@ -15,7 +15,7 @@ const Card = (props) => {
       <FrontSide onClick={onClick}>
         <img
           className="cardBorder"
-          src="https://i.dlpng.com/static/png/6985230_preview.png"
+          src={cardTop}
           alt="main"
         />
       </FrontSide>

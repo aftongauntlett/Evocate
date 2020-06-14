@@ -10,10 +10,12 @@ export default withRouter(
     state = {};
     onSubmit(event) {
       event.preventDefault();
+      const score = this.props.score;
+      const difficulty = this.props.difficulty;
       axios
         .post("http://localhost:8080/api/score", {
           name: event.currentTarget.name.value,
-          score: this.state.score,
+          score: score,
         })
         .then((response) => {
           return <Redirect to="/scoreBoard" />;
@@ -21,11 +23,11 @@ export default withRouter(
     }
 
     componentDidMount() {
-      const { score } = this.props.match.params;
+      // const { score } = this.props.match.params;
       console.log(this);
-      this.setState({
-        score,
-      });
+      // this.setState({
+      //   score,
+      // });
     }
     render() {
       const score = this.props.score;

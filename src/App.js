@@ -27,9 +27,9 @@ export default function App() {
           <Route path="/gamePage/:difficulty">
             <Themes />
           </Route>
-          <Route path="/gameOver/:score">
+          {/* <Route path="/gameOver/:score">
             <Gameover />
-          </Route>
+          </Route> */}
           {/* <Route path="/themes">
             <Themes />
           </Route> */}
