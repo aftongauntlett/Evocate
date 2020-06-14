@@ -10,7 +10,7 @@ function setupCards(props) {
   console.log("setupCards")
   console.log(props)
   let theme = props.theme
-  // console.log(count)
+
   let id = 1
   function importAll(r) {
     return r.keys().map(r);
@@ -32,46 +32,59 @@ function setupCards(props) {
   if (theme == 'random')
     theme = 'default'
 
-  themes['pokemon'] = Object.keys(imagesPoke).reduce((result, item) => {
+ 
+  const cardsPoke = []
+  for (let i = 0; i < imagesPoke.length; i++) {
+    const element = imagesPoke[i];
     const getCard = () => ({
       id: id++,
-      type: item,
+      type: i,
       cardTop,
-      cardImage: imagesPoke[item],
+      cardImage: imagesPoke[i],
       flipped: false,
     })
-    // console.log(getCard())
-    return [...result, getCard()]
-  })
+    cardsPoke.push(getCard())
+  } 
+  
+
+  themes['pokemon'] = cardsPoke
+
   id = 1;
-  themes['superheroes'] = Object.keys(imagesSuper).reduce((result, item) => {
+  const cardsHeroes = []
+  for (let i = 0; i < imagesSuper.length; i++) {
+    const element = imagesSuper[i];
     const getCard = () => ({
       id: id++,
-      type: item,
+      type: i,
       cardTop,
-      cardImage: imagesSuper[item],
+      cardImage: imagesSuper[i],
       flipped: false,
     })
-    // console.log(getCard())
-    return [...result, getCard()]
-  })
+    cardsHeroes.push(getCard())
+  } 
+  themes['superheroes'] = cardsHeroes
+
   const cards = []
   id = 1;
+  let cardCount = parseInt(props.cardCount)
+ 
   themes[theme].forEach(image => {
-    let card = {
-      id: id,
-      type: image.type,
-      cardTop,
-      cardImage: image.cardImage,
-      flipped: false
+    if (id < cardCount) {
+      let card = {
+        id: id,
+        type: image.type,
+        cardTop,
+        cardImage: image.cardImage,
+        flipped: false
+      }
+      id++;
+      cards.push(card)
+      console.log(card)
+      card = JSON.parse(JSON.stringify(card))
+      card.id = id
+      cards.push(card)
+      id++
     }
-    id++;
-    cards.push(card)
-    console.log(card)
-    card = JSON.parse(JSON.stringify(card))
-    card.id = id
-    cards.push(card)
-    id++
   });
   return suffle(cards)
 }
@@ -91,7 +104,7 @@ function suffle(cardList) {
 }
 
 export default class index extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       finalTime: null,
@@ -102,30 +115,22 @@ export default class index extends Component {
   }
 
   componentDidMount() {
-    // let seconds = 0
-    // let interval = setInterval(() => {
-    //   seconds++
-    //   console.log(seconds)
-    //   if (seconds === 10) {
-    //     clearInterval(interval)
-    //     this.setState({ running: false })
-    //   }
-    // }, 1000)
+  
   }
 
-  setFinalTime(time){
-    this.setState({finalTime: time})
+  setFinalTime(time) {
+    this.setState({ finalTime: time })
   }
 
   render() {
     const cards = setupCards(this.props)
     return (
       <div className="App">
-       <Timer running={this.state.running} setFinalTime={this.setFinalTime.bind(this)} />
+        <Timer running={this.state.running} setFinalTime={this.setFinalTime.bind(this)} />
         <Board cards={cards} />
         {
           this.state.finalTime !== null ? (
-            <p style={{fontSize: '20px', color: 'white'}}>Final Time: {this.state.finalTime}</p>
+            <p style={{ fontSize: '20px', color: 'white' }}>Final Time: {this.state.finalTime}</p>
           ) : ''
         }
       </div>
