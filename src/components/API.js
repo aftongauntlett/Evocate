@@ -24,7 +24,7 @@ export default class API extends Component {
           <div>loading...</div>
         ) : ( 
           <div>
-            <div>{this.state.image}</div>
+            <div>{this.state.id}</div>
             <img src={this.state.image}/>
           </div>
         )}

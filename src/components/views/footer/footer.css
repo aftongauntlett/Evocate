@@ -1,0 +1,25 @@
+.footer {
+  /* background-image: linear-gradient(#f23869, #0b0340b0); */
+  background-image: linear-gradient(to right, #c34869, #221a57ea);
+  font-size: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  text-align: center;
+  color: #0b0340b0 !important;
+  height: 40px;
+  margin-top: 30px;
+}
+
+.push {
+  height: 40px;
+}
+
+.row {
+  justify-content: center;
+  margin: 0 auto;
+
+}
+
+html,
+body {
+  height: 100%;
+}

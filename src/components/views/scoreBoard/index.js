@@ -30,8 +30,23 @@ export default class index extends Component {
             <p className="scoreboardParagraph">SCOREBOARD</p>
           </div>
 
-          <div className="">
-            {JSON.stringify(this.state.scores)}
+        <div className="list-container">
+          <div className="name-score-row">
+            <div className="col-6">
+              <div className="scoreboardFont">Name</div>
+            </div>
+          <div className="col-6">
+              <div className="scoreboardFont">Score</div>
+          </div>
+          </div>
+
+          <div className="player-row">
+
+          </div>
+        </div>
+
+        {/*}
+          <div className="row">
             <Table striped bordered hover>
               <thead>
                 <tr>
@@ -43,11 +58,17 @@ export default class index extends Component {
             {this.listScores()}
           </div>
         </div>
-
+    */}
+      <div className="flip-container">
+        <div className="flipper">
         <div className="row">
           <Button href="/">NEW GAME</Button>
         </div>
+        </div>
       </div>
+        
+      </div>
+    </div>
     );
   }
 }
