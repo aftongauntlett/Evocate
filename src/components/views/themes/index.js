@@ -24,7 +24,6 @@ export default withRouter(
 
     componentDidMount() {
       const { difficulty } = this.props.match.params;
-      // console.log()
       console.log(difficulty);
       this.setState(() => ({
         theme: "",

@@ -22,7 +22,7 @@ export default class index extends Component {
             <Nav.Link className="navbarFont" href="#/scoreBoard">
               Scoreboard
             </Nav.Link>
-            <Nav.Link className="navbarFont" href="#/gameOver">
+            <Nav.Link className="navbarFont" href="#/gameOver/300">
               Game Over
             </Nav.Link>
           </Nav>

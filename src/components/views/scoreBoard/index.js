@@ -1,8 +1,27 @@
 import React, { Component } from "react";
 import { Button, Table } from "react-bootstrap";
 import "./scoreBoard.css";
+import Axios from "axios";
 
 export default class index extends Component {
+  state = { scores: [] };
+  componentDidMount() {
+    Axios.get("http://localhost:8080/api/score").then((response) => {
+      this.setState({ scores: response.data.data });
+    });
+  }
+
+  listScores() {
+    return this.state.scores.map((score) => {
+      return (
+        <div className="row">
+          <div className="col-6">{score.name}</div>
+          <div className="col-6">{score.score}</div>
+        </div>
+      );
+    });
+  }
+
   render() {
     return (
       <div>
@@ -11,7 +30,8 @@ export default class index extends Component {
             <p className="scoreboardParagraph">SCOREBOARD</p>
           </div>
 
-          <div className="row">
+          <div className="">
+            {JSON.stringify(this.state.scores)}
             <Table striped bordered hover>
               <thead>
                 <tr>
@@ -19,13 +39,8 @@ export default class index extends Component {
                   <th className="scoreboardFont">Score</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
             </Table>
+            {this.listScores()}
           </div>
         </div>
 
