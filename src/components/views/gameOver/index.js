@@ -16,12 +16,15 @@ export default class index extends Component {
       });
   }
   render() {
+    const score = this.props.score
+    const difficulty = this.props.difficulty
     return (
       <div className="game-over-container">
         <div className="row">
           <p className="gameOverParagraph">GAME OVER</p>
         </div>
         <Form onSubmit={this.onSubmit}>
+          <div style={{color: "white"}}>score {score} difficulty {difficulty}</div>
           <div className="row">
             <Form.Control
               type="text"

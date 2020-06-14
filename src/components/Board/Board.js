@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Card from "../Card";
 import "./Board.css";
 import Timer from '../views/gamePage/timer'
-
+import GameOver from '../views/gameOver'
 
 const Board = (props) => {
   const [cards, setCards] = useState(props.cards);
@@ -38,8 +38,8 @@ const Board = (props) => {
       }, time);
     }
   };
-  const setFinalTime = function(time) {
-    setTime( time )
+  const setFinalTime = function (time) {
+    setTime(time)
   };
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const Board = (props) => {
     // eslint-disable-next-line
   }, [checkers, completed]);
 
-  
+
   return (
     <div className="d-flex justify-content-center">
       {/* {loading && (
@@ -75,8 +75,10 @@ const Board = (props) => {
 
       {loading && (
         <>
-          <Timer running={completed.length != cardCount/2} setFinalTime={setFinalTime.bind(this)} />
-      final time   {finalTime} total cards: {cardCount}: completed sets:{completed.length}
+          {/* <div key="stats"> */}
+            <Timer running={completed.length != cardCount / 2} setFinalTime={setFinalTime.bind(this)} />
+            <div style={{color: "white"}}>final time   {finalTime} total cards: {cardCount}: completed sets:{completed.length}</div>
+          {/* </div> */}
           {/* <div className="statistics">
             <span>Turns: {turns}</span>
             <span>Pairs: {pairsMatched} of {pairs}</span>
@@ -85,13 +87,18 @@ const Board = (props) => {
               <button onClick={resetGame}>New game</button>
             )}
           </div> */}
-          <div className="row">
-            {cards && cards.length > 0 && cards.map((card) => (
-              <div className="col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center my-5">
-                <Card {...card} onClick={onCardClick(card)} key={card.id} />
-              </div>
-            ))}
-          </div>
+          {completed.length == cardCount / 2 && (
+            <GameOver difficulty={cardCount} score={finalTime} />
+          )}
+          {completed.length != cardCount / 2 && (
+            <div className="row">
+              {cards && cards.length > 0 && cards.map((card) => (
+                <div className="col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center my-5">
+                  <Card {...card} onClick={onCardClick(card)} key={card.id} />
+                </div>
+              ))}
+            </div>
+          )}
         </>
       )}
     </div>
