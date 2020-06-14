@@ -3,7 +3,9 @@ import react from '../../../images/react.png'
 import Board from '../../Board/Board'
 import cardTop from '../../../images/blank.png'
 import cat from '../../../images/cat.jpg'
-import Timer from './timer'
+import axios from "axios";
+
+
 
 // import "./styles.css";
 function setupCards(props) {
@@ -28,65 +30,121 @@ function setupCards(props) {
       cardImage: cat
     }]
   }
-  // TODO: random images from rest api
-  if (theme == 'random')
-    theme = 'default'
-
- 
-  const cardsPoke = []
-  for (let i = 0; i < imagesPoke.length; i++) {
-    const element = imagesPoke[i];
-    const getCard = () => ({
-      id: id++,
-      type: i,
-      cardTop,
-      cardImage: imagesPoke[i],
-      flipped: false,
-    })
-    cardsPoke.push(getCard())
-  } 
-  
-
-  themes['pokemon'] = cardsPoke
-
-  id = 1;
-  const cardsHeroes = []
-  for (let i = 0; i < imagesSuper.length; i++) {
-    const element = imagesSuper[i];
-    const getCard = () => ({
-      id: id++,
-      type: i,
-      cardTop,
-      cardImage: imagesSuper[i],
-      flipped: false,
-    })
-    cardsHeroes.push(getCard())
-  } 
-  themes['superheroes'] = cardsHeroes
-
-  const cards = []
-  id = 1;
   let cardCount = parseInt(props.cardCount)
- 
-  themes[theme].forEach(image => {
-    if (id < cardCount) {
-      let card = {
-        id: id,
-        type: image.type,
-        cardTop,
-        cardImage: image.cardImage,
-        flipped: false
+
+  // TODO: random images from rest api
+  if (theme == 'random') {
+    const picsumApiUrl = 'https://picsum.photos/200'
+
+    const getImages = async () => {
+      let fetchedImages = []
+
+      while (fetchedImages.length < cardCount) {
+        const response = await axios.get(picsumApiUrl)
+        console.log('random image')
+        console.log(response)
+
+        if (response.request.responseURL) {
+          fetchedImages.push(response.request.responseURL)
+        }
+        console.log(fetchedImages)
       }
-      id++;
-      cards.push(card)
-      console.log(card)
-      card = JSON.parse(JSON.stringify(card))
-      card.id = id
-      cards.push(card)
-      id++
+      id = 1
+      const cardsRandom = []
+      for (let i = 0; i < fetchedImages.length; i++) {
+        const getCard = () => ({
+          id: id++,
+          type: i,
+          cardTop,
+          cardImage: fetchedImages[i],
+          flipped: false,
+        })
+        cardsRandom.push(getCard())
+      }
+      themes[theme] = cardsRandom
+      const cards = []
+      id = 1
+      themes[theme].forEach(image => {
+        if (id < cardCount) {
+          let card = {
+            id: id,
+            type: image.type,
+            cardTop,
+            cardImage: image.cardImage,
+            flipped: false
+          }
+          id++;
+          cards.push(card)
+          console.log(card)
+          card = JSON.parse(JSON.stringify(card))
+          card.id = id
+          cards.push(card)
+          id++
+        }
+      });
+      return suffle(themes[theme])
+      // themes['default'] = cardsRandom
     }
-  });
-  return suffle(cards)
+    return getImages()
+    theme = 'default'
+  } else {
+    id = 1
+
+    const cardsPoke = []
+    for (let i = 0; i < imagesPoke.length; i++) {
+      const element = imagesPoke[i];
+      const getCard = () => ({
+        id: id++,
+        type: i,
+        cardTop,
+        cardImage: imagesPoke[i],
+        flipped: false,
+      })
+      cardsPoke.push(getCard())
+    }
+
+
+    themes['pokemon'] = cardsPoke
+
+    id = 1;
+    const cardsHeroes = []
+    for (let i = 0; i < imagesSuper.length; i++) {
+      const element = imagesSuper[i];
+      const getCard = () => ({
+        id: id++,
+        type: i,
+        cardTop,
+        cardImage: imagesSuper[i],
+        flipped: false,
+      })
+      cardsHeroes.push(getCard())
+    }
+    themes['superheroes'] = cardsHeroes
+
+    const cards = []
+    id = 1;
+
+    themes[theme].forEach(image => {
+      if (id < cardCount) {
+        let card = {
+          id: id,
+          type: image.type,
+          cardTop,
+          cardImage: image.cardImage,
+          flipped: false
+        }
+        id++;
+        cards.push(card)
+        console.log(card)
+        card = JSON.parse(JSON.stringify(card))
+        card.id = id
+        cards.push(card)
+        id++
+      }
+    });
+    console.log(cards)
+    return suffle(cards)
+  }
 }
 
 
@@ -115,7 +173,7 @@ export default class index extends Component {
   }
 
   componentDidMount() {
-  
+
   }
 
   setFinalTime(time) {
@@ -123,11 +181,12 @@ export default class index extends Component {
   }
 
   render() {
+    const this.props.cardCount
     const cards = setupCards(this.props)
+
     return (
       <div className="App">
-        <Timer running={this.state.running} setFinalTime={this.setFinalTime.bind(this)} />
-        <Board cards={cards} />
+        <Board cards={cards} cardCount={cardCount} />
         {
           this.state.finalTime !== null ? (
             <p style={{ fontSize: '20px', color: 'white' }}>Final Time: {this.state.finalTime}</p>
