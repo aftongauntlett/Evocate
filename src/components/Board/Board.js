@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Card";
 import "./Board.css";
+import Timer from '../views/gamePage/timer'
+
 
 const Board = (props) => {
   const [cards, setCards] = useState(props.cards);
+  const [cardCount, setCardCount] = useState(props.cardCount);
+  const [finalTime, setTime] = useState([]);
+
   const [checkers, setCheckers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [completed, setCompleted] = useState([]);
@@ -33,9 +38,12 @@ const Board = (props) => {
       }, time);
     }
   };
+  const setFinalTime = function(time) {
+    setTime( time )
+  };
 
   useEffect(() => {
-    if (cards) {
+    if (cards && cards.length > 0) {
       const newCards = [];
       cards.forEach((card) => {
         const newCard = {
@@ -46,12 +54,14 @@ const Board = (props) => {
         };
         newCards.push(newCard);
       });
+      console.log(newCards)
 
       setCards(newCards);
     }
     // eslint-disable-next-line
   }, [checkers, completed]);
 
+  
   return (
     <div className="d-flex justify-content-center">
       {/* {loading && (
@@ -65,6 +75,8 @@ const Board = (props) => {
 
       {loading && (
         <>
+          <Timer running={completed.length != cardCount/2} setFinalTime={setFinalTime.bind(this)} />
+      final time   {finalTime} total cards: {cardCount}: completed sets:{completed.length}
           {/* <div className="statistics">
             <span>Turns: {turns}</span>
             <span>Pairs: {pairsMatched} of {pairs}</span>
@@ -74,7 +86,7 @@ const Board = (props) => {
             )}
           </div> */}
           <div className="row">
-            {cards.map((card) => (
+            {cards && cards.length > 0 && cards.map((card) => (
               <div className="col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center my-5">
                 <Card {...card} onClick={onCardClick(card)} key={card.id} />
               </div>
