@@ -27,7 +27,7 @@ export default withRouter(
       // console.log()
       console.log(difficulty);
       this.setState(() => ({
-        theme: difficulty == "24" || difficulty == "12" ? "" : "random",
+        theme: "",
         cardCount: difficulty,
       }));
     }

@@ -162,15 +162,15 @@ function suffle(cardList) {
 }
 
 export default class index extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      finalTime: null,
-      running: true
-    }
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     finalTime: null,
+  //     running: true
+  //   }
 
 
-  }
+  // }
 
   componentDidMount() {
 
@@ -181,17 +181,17 @@ export default class index extends Component {
   }
 
   render() {
-    const this.props.cardCount
+    const cardCount = this.props.cardCount
     const cards = setupCards(this.props)
 
     return (
       <div className="App">
         <Board cards={cards} cardCount={cardCount} />
-        {
+        {/* {
           this.state.finalTime !== null ? (
             <p style={{ fontSize: '20px', color: 'white' }}>Final Time: {this.state.finalTime}</p>
           ) : ''
-        }
+        } */}
       </div>
     )
     // return <div>Main Game!</div>;
