@@ -63,7 +63,7 @@ const Board = (props) => {
 
 
   return (
-    <div className="d-flex justify-content-center">
+    <div className="container">
       {/* {loading && (
         <div className="spinner">
           <div>
@@ -76,8 +76,12 @@ const Board = (props) => {
       {loading && (
         <>
           {/* <div key="stats"> */}
-            <Timer running={completed.length != cardCount / 2} setFinalTime={setFinalTime.bind(this)} />
-            <div style={{color: "white"}}>final time   {finalTime} total cards: {cardCount}: completed sets:{completed.length}</div>
+          {/* <div class="row"> */}
+            <div class="row">
+              <Timer running={completed.length != cardCount / 2} setFinalTime={setFinalTime.bind(this)} />
+            </div>
+            <div class="row" style={{ color: "white" }}>final time   {finalTime} total cards: {cardCount}: completed sets:{completed.length}</div>
+          {/* </div> */}
           {/* </div> */}
           {/* <div className="statistics">
             <span>Turns: {turns}</span>
@@ -88,15 +92,19 @@ const Board = (props) => {
             )}
           </div> */}
           {completed.length == cardCount / 2 && (
-            <GameOver difficulty={cardCount} score={finalTime} />
+            <div class="row">
+              <GameOver difficulty={cardCount} score={finalTime} />
+            </div>
           )}
           {completed.length != cardCount / 2 && (
             <div className="row">
-              {cards && cards.length > 0 && cards.map((card) => (
-                <div className="col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center my-5">
-                  <Card {...card} onClick={onCardClick(card)} key={card.id} />
-                </div>
-              ))}
+              <div class="d-flex justify-content-center">
+                {cards && cards.length > 0 && cards.map((card) => (
+                  <div className="col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center my-5">
+                    <Card {...card} onClick={onCardClick(card)} key={card.id} />
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </>

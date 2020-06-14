@@ -60,7 +60,7 @@ export default withRouter(
                 </Button>
               </div>
 
-              <div className="row">
+              {/* <div className="row">
                 <Button
                   onClick={this.selectTheme("create")}
                   className="create-button"
@@ -75,8 +75,8 @@ export default withRouter(
                   className="random-button"
                 >
                   Random
-                </Button>
-              </div>
+                </Button>/
+              </div> */}
             </div>
           )}
         </div>

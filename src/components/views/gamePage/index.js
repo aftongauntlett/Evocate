@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import react from '../../../images/react.png'
 import Board from '../../Board/Board'
-import cardTop from '../../../images/blank.png'
+import cardTop from '../../../images/cardback.png'
 import cat from '../../../images/cat.jpg'
 import axios from "axios";
 
