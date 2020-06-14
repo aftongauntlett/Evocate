@@ -37,7 +37,6 @@ Form {
   width: 300px;
 }
 
-<<<<<<< HEAD
 .gameOverParagraph {
   color: #f23869;
   font-family: "Megrim", cursive;
@@ -45,8 +44,6 @@ Form {
   text-align: center;
 }
 
-=======
->>>>>>> API call and more pictures
 th {
   color: #f23869;
   font-family: "Megrim", cursive;
@@ -124,6 +121,9 @@ span:nth-child(4) {
   left: 10px;
   border-radius: 50%;
   z-index: 9;
+  font-family: "Megrim", cursive;
+  color: azure;
+  font-size: 25px;
 }
 
 @keyframes rotate {
