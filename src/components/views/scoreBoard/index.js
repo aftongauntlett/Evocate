@@ -50,7 +50,7 @@ export default class index extends Component {
           <div className="flip-container">
             <div className="flipper">
               <div className="row">
-                <Button href="/">NEW GAME</Button>
+                <Button href="#/">NEW GAME</Button>
               </div>
             </div>
           </div>
