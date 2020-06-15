@@ -1,35 +1,13 @@
-Your final group project must:
-
-- Include solid, properly-used HTML and CSS
-- Incorporate React, including props, state, and router
-- Must include a back-end api you develop with either Mongo/mongoose or MySQL/sequelize
-- The API must support all CRUD methods
-- Must include at least one new technology, such as:
-- Third party React component
-- Third party JS library/node package
-- Third party API
-- Must incorporate a CSS framework such as Bootstrap or Bulma, or make regular use of Flexbox and CSS grid
-- Must be responsive, w/ suopport for at least desktop and mobile sizing
-- Must pass a fairly rigorous debugging test (form validation, etc)
-- Must incorporate well-structured code, properly indented, commented, etc
-- Must have a well-produced, informative ReadMe file
-- Must have a solid amount of regular commits for each group member
-- Must be deployed on Heroku or similar hosting platform
-- Must include a presentation of approx 10-15 minutes, in which all members particpate, and which covers:
-  - Overall objective/mission
-  - Description of MVP
-  - Tech stack used
-  - How work was divided up
-  - Challenges faced
-
 # Evocate
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/aftongauntlett/Evocate)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Github:** https://github.com/aftongauntlett/Evocate
+**Github:** [View the Github Repo here](https://github.com/aftongauntlett/Evocate)
 
-**Deployed:** Coming Soon
+**Deployed:** [View the Game Live here]()
+
+**Trello:** [View our Trello Board here](https://docs.google.com/presentation/d/15NUO1nKsMYdAS6-0oP00azgbQMNjGoEWI1Kk-GIz70E/edit?usp=sharing)
 
 ## Description
 
@@ -40,15 +18,12 @@ Evocate is a basic game built to test the player's memory. In a deck of paired c
 - React
 - React Bootstrap
 - Node
-- MongoDB
+- MySQL
+- Sequelize
 - HTML
 - CSS
 - JavaScript
 - API
-
-## API Credit
-
-Coming Soon
 
 ## Screenshot
 

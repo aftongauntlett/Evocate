@@ -1,37 +1,37 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
 
-export default class API extends Component {
+// export default class API extends Component {
 
-  state = {
-    loading: true,
-    image: null,
-  }
+//   state = {
+//     loading: true,
+//     image: null,
+//   }
 
-  async componentDidMount() {
-    const url = "jceMwsZj2DhCmFS8pwlkdkEpXnQjFyvDHDPvNUY-4RA";
-    const APIKEY = "-Z4_zPrBTHIfOGW5kCOfZKs67aITV_CSDnmkEAdbtNU";
-    const response = await fetch(url);
-    const data = await response.json();
-    this.setState({ image: data.results[0], loading: false });
+//   async componentDidMount() {
+//     const url = "jceMwsZj2DhCmFS8pwlkdkEpXnQjFyvDHDPvNUY-4RA";
+//     const APIKEY = "-Z4_zPrBTHIfOGW5kCOfZKs67aITV_CSDnmkEAdbtNU";
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     this.setState({ image: data.results[0], loading: false });
     
-  }
+//   }
 
 
-  render() {
-    return (
-      <div>
-        {this.state.loading || !this.state.image ? (
-          <div>loading...</div>
-        ) : ( 
-          <div>
-            <div>{this.state.id}</div>
-            <img src={this.state.image}/>
-          </div>
-        )}
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div>
+//         {this.state.loading || !this.state.image ? (
+//           <div>loading...</div>
+//         ) : ( 
+//           <div>
+//             <div>{this.state.id}</div>
+//             <img src={this.state.image}/>
+//           </div>
+//         )}
+//       </div>
+//     );
+//   }
+// }
 
 
 

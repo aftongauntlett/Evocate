@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./footer.css";
 
 export default class index extends Component {
@@ -8,7 +8,7 @@ export default class index extends Component {
         <div className="footer">
           <div className="row">
             <div className="push"></div>
-          Copyright of Evocate (©)
+            Copyright© 2020 Evocate
           </div>
         </div>
       </div>

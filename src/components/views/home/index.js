@@ -7,7 +7,6 @@ export default class index extends Component {
     starting: false,
   };
 
-  // created this function to make the button disappear when clicked
   startButton() {
     if (!this.state.starting) {
       return (

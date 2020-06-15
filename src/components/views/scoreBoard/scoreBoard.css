@@ -26,9 +26,6 @@
   font-size: 20px !important;
   text-align: center;
   justify-content: center;
-  /* margin: 45px;
-  width: 250px;
-  height: 100px; */
 }
 
 @media only screen and (max-width: 700px) {
@@ -42,21 +39,22 @@
 }
 
 .scoreboardFont {
-  color: #f23869;
+  color: #4f325a;
   font-family: "Megrim", cursive;
-  font-size: 30px;
+  font-size: 32px;
+  font-weight: bold;
   text-align: center;
 }
 
 .list-container {
-  background-color: white;
+  background-color: rgba(255, 240, 254, 0.856);
   width: 500px;
   height: 300px;
-  outline: thin white !important;
+  outline: thin rgb(214, 207, 214) !important;
   margin: 0 auto;
   flex-wrap: wrap;
   flex-flow: column wrap;
-
+  border-radius: 12px;
 }
 
 .name-score-row {
@@ -75,26 +73,15 @@
     margin: 0 auto;
     flex-wrap: wrap;
     flex-flow: column wrap;
-  
   }
-  
+
   .name-score-row {
     outline: black;
     border-width: thin;
     justify-content: space-evenly;
     text-align: center;
-  
   }
 }
-/*
-Table {
-  font-family: "Noto Sans JP", sans-serif;
-  text-align: center;
-  outline: thin;
-  justify-content: center;
-  margin: 25px;
-}
-*/
 
 .btn-primary {
   background-color: #0b0340e1 !important;

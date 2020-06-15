@@ -35,28 +35,20 @@ export default withRouter(
       return (
         <div className="game-over-container">
           <div className="row">
-            <p className="gameOverParagraph">GAME OVER</p>
+            <p className="gameOverParagraph">Join the Leader Board</p>
           </div>
 
-          <Form onSubmit={this.onSubmit}>
-            <div style={{ color: "white" }}>
-              score {score} difficulty {difficulty}
-            </div>
-            <div className="row">
-              <p className="gameOverParagraph">GAME OVER</p>
-            </div>
-            <div className="ball d-flex justify-content-center">
-              <div className="outer-circle">
-                <div className="inner-circle d-flex justify-content-center align-items-center">
-                  {this.state.score}
-                </div>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+          <div className="ball d-flex justify-content-center">
+            <div className="outer-circle">
+              <div className="inner-circle d-flex justify-content-center align-items-center">
+                {difficulty}
               </div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-          </Form>
+          </div>
 
           <Form className="mt-5" onSubmit={this.onSubmit}>
             <div className="row">

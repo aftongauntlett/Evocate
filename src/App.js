@@ -3,23 +3,16 @@ import Navbar from "./components/Navbar";
 import React from "react";
 import Home from "./components/views/home";
 import Scoreboard from "./components/views/scoreBoard";
-import Gameover from "./components/views/gameOver";
-// import Gamepage from "./components/views/gamePage";
 import Themes from "./components/views/themes/index";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Footer from "./components/views/footer";
 
-
 export default function App() {
   return (
-    // using this to make github pages work
     <HashRouter basename="/">
-      {/* importing the navbar */}
       <Navbar />
-      {/* a switch to switch between pages */}
       <div>
-      <Favicon />
-
+        <Favicon />
         <Switch>
           <Route path="/scoreBoard">
             <Scoreboard />
@@ -27,12 +20,6 @@ export default function App() {
           <Route path="/gamePage/:difficulty">
             <Themes />
           </Route>
-          {/* <Route path="/gameOver/:score">
-            <Gameover />
-          </Route> */}
-          {/* <Route path="/themes">
-            <Themes />
-          </Route> */}
           <Route path="/">
             <Home />
           </Route>
@@ -40,8 +27,5 @@ export default function App() {
         <Footer />
       </div>
     </HashRouter>
-
-   
-
   );
 }
