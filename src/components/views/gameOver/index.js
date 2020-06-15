@@ -18,7 +18,7 @@ export default withRouter(
           score: score,
         })
         .then((response) => {
-          this.props.history.push("/#/scoreBoard");
+          this.props.history.push("/scoreBoard");
         });
     }
 
