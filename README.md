@@ -7,7 +7,9 @@
 
 **Deployed:** [View the Game Live here](https://aftongauntlett.github.io/evocate-public/#/)
 
-**Trello:** [View our Trello Board here](https://docs.google.com/presentation/d/15NUO1nKsMYdAS6-0oP00azgbQMNjGoEWI1Kk-GIz70E/edit?usp=sharing)
+**Trello:** [View our Trello Board here](https://trello.com/b/tb8re4zG/jjam-project)
+
+**Google Slideshow:** [View our Google Slides Presentation here](https://docs.google.com/presentation/d/15NUO1nKsMYdAS6-0oP00azgbQMNjGoEWI1Kk-GIz70E/edit?usp=sharing)
 
 ## Description
 
