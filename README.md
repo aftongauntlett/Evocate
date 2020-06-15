@@ -9,6 +9,8 @@
 
 **Trello:** [View our Trello Board here](https://trello.com/b/tb8re4zG/jjam-project)
 
+**Google Slideshow:** [View our Google Slides Presentation here](https://docs.google.com/presentation/d/15NUO1nKsMYdAS6-0oP00azgbQMNjGoEWI1Kk-GIz70E/edit?usp=sharing)
+
 ## Description
 
 Evocate is a basic game built to test the player's memory. In a deck of paired cards, the player needs to match each pair to win the game. Choosing a card will reveal the image until a second hidden card is chosen. If the card chosen matches the first card, the player scores a point. If not, both cards are hidden again and it is up to the player to memorize the cards until completion or the time runs out!
