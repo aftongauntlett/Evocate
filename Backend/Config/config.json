@@ -1,0 +1,33 @@
+{
+  "development": {
+    "username": "root",
+    "password": "trinity7",
+    "database": "evocate",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "heroku": {
+    "host": "us-cdbr-east-05.cleardb.net",
+    "port": 3306,
+    "user": "b13f9030c9b0bc",
+    "password": "process.env.DB_PASWORD",
+    "database": "heroku_9d813801ee92f"
+  }
+}
