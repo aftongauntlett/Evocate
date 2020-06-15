@@ -12,6 +12,7 @@ export default withRouter(
       event.preventDefault();
       const score = this.props.score;
       const difficulty = this.props.difficulty;
+      console.log("submit pressed", score, difficulty);
       axios
         .post("http://localhost:8080/api/score", {
           name: event.currentTarget.name.value,
@@ -24,7 +25,7 @@ export default withRouter(
 
     componentDidMount() {
       // const { score } = this.props.match.params;
-      console.log(this);
+      console.log(this.props);
       // this.setState({
       //   score,
       // });
@@ -41,7 +42,7 @@ export default withRouter(
           <div className="ball d-flex justify-content-center">
             <div className="outer-circle">
               <div className="inner-circle d-flex justify-content-center align-items-center">
-                {difficulty}
+                {score}
               </div>
               <span></span>
               <span></span>
@@ -50,7 +51,12 @@ export default withRouter(
             </div>
           </div>
 
-          <Form className="mt-5" onSubmit={this.onSubmit}>
+          <Form
+            className="mt-5"
+            onSubmit={(event) => {
+              this.onSubmit(event);
+            }}
+          >
             <div className="row">
               <Form.Control
                 type="text"

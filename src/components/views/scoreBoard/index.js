@@ -40,6 +40,7 @@ export default class index extends Component {
                 <div className="scoreboardFont">Score</div>
               </div>
             </div>
+            {this.listScores()}
 
             <div className="player-row"></div>
           </div>

@@ -7,7 +7,7 @@ import GameOver from "../views/gameOver";
 const Board = (props) => {
   const [cards, setCards] = useState(props.cards);
   const [cardCount, setCardCount] = useState(props.cardCount);
-  const [finalTime, setTime] = useState([]);
+  const [finalTime, setTime] = useState(0);
 
   const [checkers, setCheckers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -65,25 +65,26 @@ const Board = (props) => {
     <div className="container">
       {loading && (
         <>
-          <div class="row">
+          <div className="row">
             <Timer
               running={completed.length != cardCount / 2}
               setFinalTime={setFinalTime.bind(this)}
             />
           </div>
-          <div class="d-flex justify-content-around cardCount row mt-3">
-            <div class="mt-3">Total Sets: {cardCount}</div>
-            <div class="mt-3">Completed Sets: {completed.length}</div>
+          <div className="d-flex justify-content-around cardCount row mt-3">
+            <div className="mt-3">Total Sets: {cardCount}</div>
+            <div className="mt-3">Completed Sets: {completed.length}</div>
           </div>
+          {/* {completed.length === 0 && ( */}
           {completed.length == cardCount / 2 && (
-            <div class="row">
+            <div className="row">
               <GameOver difficulty={cardCount} score={finalTime} />
             </div>
           )}{" "}
           {completed.length == cardCount / 2 && <div class="row"></div>}
           {completed.length != cardCount / 2 && (
             <div className="row">
-              <div class="d-flex justify-content-center flex-wrap">
+              <div className="d-flex justify-content-center flex-wrap">
                 {cards &&
                   cards.length > 0 &&
                   cards.map((card) => (
