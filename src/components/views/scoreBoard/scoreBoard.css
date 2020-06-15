@@ -1,3 +1,17 @@
+.scoreName {
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 20px;
+  color: rgb(238, 227, 237);
+}
+
+.scoreScore {
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 20px;
+  color: rgb(238, 227, 237);
+}
+
 .scoreboard-container {
   background-color: #030226;
   width: 100%;
@@ -39,18 +53,18 @@
 }
 
 .scoreboardFont {
-  color: #4f325a;
+  color: rgb(197, 176, 195);
   font-family: "Megrim", cursive;
-  font-size: 32px;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
 }
 
 .list-container {
-  background-color: rgba(255, 240, 254, 0.856);
+  /* background-color: rgba(255, 240, 254, 0.856); */
   width: 500px;
   height: 300px;
-  outline: thin rgb(214, 207, 214) !important;
+  /* outline: thin rgb(214, 207, 214) !important; */
   margin: 0 auto;
   flex-wrap: wrap;
   flex-flow: column wrap;
@@ -66,10 +80,10 @@
 
 @media only screen and (max-width: 700px) {
   .list-container {
-    background-color: white;
+    /* background-color: white; */
     width: 500px;
     height: 300px;
-    outline: thin white !important;
+    /* outline: thin white !important; */
     margin: 0 auto;
     flex-wrap: wrap;
     flex-flow: column wrap;

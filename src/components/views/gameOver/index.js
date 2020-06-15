@@ -14,7 +14,7 @@ export default withRouter(
       const difficulty = this.props.difficulty;
       console.log("submit pressed", score, difficulty);
       axios
-        .post("http://localhost:8080/api/score", {
+        .post("https://evocate-backend.herokuapp.com/api/score", {
           name: event.currentTarget.name.value,
           score: score,
         })
@@ -34,15 +34,11 @@ export default withRouter(
       const score = this.props.score;
       const difficulty = this.props.difficulty;
       return (
-        <div className="game-over-container">
-          <div className="row">
-            <p className="gameOverParagraph">Join the Leader Board</p>
-          </div>
-
+        <div className="game-over-container flex-wrap">
           <div className="ball d-flex justify-content-center">
             <div className="outer-circle">
               <div className="inner-circle d-flex justify-content-center align-items-center">
-                {score}
+                Awesome!
               </div>
               <span></span>
               <span></span>
@@ -51,8 +47,12 @@ export default withRouter(
             </div>
           </div>
 
+          <div className="row mt-3">
+            <p className="gameOverParagraph">Join the Leader Board</p>
+          </div>
+
           <Form
-            className="mt-5"
+            className="mt-3"
             onSubmit={(event) => {
               this.onSubmit(event);
             }}

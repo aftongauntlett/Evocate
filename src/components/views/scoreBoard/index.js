@@ -6,17 +6,19 @@ import Axios from "axios";
 export default class index extends Component {
   state = { scores: [] };
   componentDidMount() {
-    Axios.get("http://localhost:8080/api/score").then((response) => {
-      this.setState({ scores: response.data.data });
-    });
+    Axios.get("https://evocate-backend.herokuapp.com/api/score").then(
+      (response) => {
+        this.setState({ scores: response.data.data });
+      }
+    );
   }
 
   listScores() {
     return this.state.scores.map((score) => {
       return (
-        <div className="row">
-          <div className="col-6">{score.name}</div>
-          <div className="col-6">{score.score}</div>
+        <div className="row flex-wrap">
+          <div className=" scoreName col-6">{score.name}</div>
+          <div className="scoreScore col-6">{score.score}</div>
         </div>
       );
     });
@@ -24,7 +26,7 @@ export default class index extends Component {
 
   render() {
     return (
-      <div>
+      <div className="flex-wrap">
         <div className="scoreboard-container">
           <div className="row">
             <p className="scoreboardParagraph">SCOREBOARD</p>
