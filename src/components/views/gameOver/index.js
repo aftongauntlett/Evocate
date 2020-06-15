@@ -18,11 +18,7 @@ export default withRouter(
           score: score,
         })
         .then((response) => {
-          window.location.href =
-            window.location.protocol +
-            "//" +
-            window.location.host +
-            "/#/scoreBoard";
+          this.props.history.push("/#/scoreBoard");
         });
     }
 

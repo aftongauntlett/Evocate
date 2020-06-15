@@ -1,6 +1,6 @@
 {
   "name": "evocate",
-  "homepage": "https://aftongauntlett.github.io/evocate-public/",
+  "homepage": "https://aftongauntlett.github.io/evocate-public",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
