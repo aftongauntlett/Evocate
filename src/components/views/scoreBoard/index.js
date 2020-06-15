@@ -29,7 +29,7 @@ export default class index extends Component {
       <div className="flex-wrap">
         <div className="scoreboard-container">
           <div className="row">
-            <p className="scoreboardParagraph">SCOREBOARD</p>
+            <p className="scoreboardParagraph">Leader Board</p>
           </div>
 
           <div className="list-container">

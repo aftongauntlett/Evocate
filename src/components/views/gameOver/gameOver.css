@@ -14,7 +14,7 @@
 .gameOverParagraph {
   color: #f23869;
   font-family: "Megrim", cursive;
-  font-size: 200px;
+  font-size: 100px;
   text-align: center;
   justify-content: center;
 }
@@ -35,6 +35,7 @@ Form {
   justify-content: center;
   margin: 0 auto;
   width: 300px;
+  margin-top: 35px;
 }
 
 th {

@@ -15,7 +15,6 @@
 .scoreboard-container {
   background-color: #030226;
   width: 100%;
-  height: 100%;
   justify-content: center;
   flex-wrap: wrap;
   flex-flow: column wrap;
@@ -61,10 +60,7 @@
 }
 
 .list-container {
-  /* background-color: rgba(255, 240, 254, 0.856); */
   width: 500px;
-  height: 300px;
-  /* outline: thin rgb(214, 207, 214) !important; */
   margin: 0 auto;
   flex-wrap: wrap;
   flex-flow: column wrap;
@@ -80,10 +76,7 @@
 
 @media only screen and (max-width: 700px) {
   .list-container {
-    /* background-color: white; */
     width: 500px;
-    height: 300px;
-    /* outline: thin white !important; */
     margin: 0 auto;
     flex-wrap: wrap;
     flex-flow: column wrap;

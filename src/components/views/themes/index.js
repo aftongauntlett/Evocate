@@ -60,6 +60,15 @@ export default withRouter(
               </div>
             </div>
           )}
+          <div className="ball d-flex justify-content-center mt-5">
+            <div className="outer-circle">
+              <div className="inner-circle d-flex justify-content-center align-items-center"></div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
       );
     }

@@ -12,41 +12,25 @@ export default withRouter(
       event.preventDefault();
       const score = this.props.score;
       const difficulty = this.props.difficulty;
-      console.log("submit pressed", score, difficulty);
       axios
         .post("https://evocate-backend.herokuapp.com/api/score", {
           name: event.currentTarget.name.value,
           score: score,
         })
         .then((response) => {
-          return <Redirect to="/scoreBoard" />;
+          window.location.href =
+            window.location.protocol +
+            "//" +
+            window.location.host +
+            "/#/scoreBoard";
         });
     }
 
-    componentDidMount() {
-      // const { score } = this.props.match.params;
-      console.log(this.props);
-      // this.setState({
-      //   score,
-      // });
-    }
     render() {
       const score = this.props.score;
       const difficulty = this.props.difficulty;
       return (
         <div className="game-over-container flex-wrap">
-          <div className="ball d-flex justify-content-center">
-            <div className="outer-circle">
-              <div className="inner-circle d-flex justify-content-center align-items-center">
-                Awesome!
-              </div>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-
           <div className="row mt-3">
             <p className="gameOverParagraph">Join the Leader Board</p>
           </div>
