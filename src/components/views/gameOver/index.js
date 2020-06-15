@@ -13,52 +13,34 @@ export default withRouter(
       const score = this.props.score;
       const difficulty = this.props.difficulty;
       axios
-        .post("http://localhost:8080/api/score", {
+        .post("https://evocate-backend.herokuapp.com/api/score", {
           name: event.currentTarget.name.value,
           score: score,
         })
         .then((response) => {
-          return <Redirect to="/scoreBoard" />;
+          window.location.href =
+            window.location.protocol +
+            "//" +
+            window.location.host +
+            "/#/scoreBoard";
         });
     }
 
-    componentDidMount() {
-      // const { score } = this.props.match.params;
-      console.log(this);
-      // this.setState({
-      //   score,
-      // });
-    }
     render() {
       const score = this.props.score;
       const difficulty = this.props.difficulty;
       return (
-        <div className="game-over-container">
-          <div className="row">
-            <p className="gameOverParagraph">GAME OVER</p>
+        <div className="game-over-container flex-wrap">
+          <div className="row mt-3">
+            <p className="gameOverParagraph">Join the Leader Board</p>
           </div>
 
-          <Form onSubmit={this.onSubmit}>
-            <div style={{ color: "white" }}>
-              score {score} difficulty {difficulty}
-            </div>
-            <div className="row">
-              <p className="gameOverParagraph">GAME OVER</p>
-            </div>
-            <div className="ball d-flex justify-content-center">
-              <div className="outer-circle">
-                <div className="inner-circle d-flex justify-content-center align-items-center">
-                  {this.state.score}
-                </div>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-          </Form>
-
-          <Form className="mt-5" onSubmit={this.onSubmit}>
+          <Form
+            className="mt-3"
+            onSubmit={(event) => {
+              this.onSubmit(event);
+            }}
+          >
             <div className="row">
               <Form.Control
                 type="text"

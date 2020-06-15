@@ -16,15 +16,12 @@ export default class index extends Component {
             <Nav.Link className="navbarFont" href="/">
               Home
             </Nav.Link>
-            {/* <Nav.Link className="navbarFont" href="#/themes">
-              Themes
-            </Nav.Link> */}
             <Nav.Link className="navbarFont" href="#/scoreBoard">
               Scoreboard
             </Nav.Link>
-            {/* <Nav.Link className="navbarFont" href="#/gameOver/300">
-              Game Over
-            </Nav.Link> */}
+            <Nav.Link className="navbarFont" href="/">
+              New Game
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

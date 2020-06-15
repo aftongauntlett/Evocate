@@ -8,7 +8,6 @@ export default withRouter(
   class index extends Component {
     constructor(props) {
       super(props);
-      // if not easy as in greater than 12 cards then set theme to random, else let them choose theme
       this.state = {
         theme: "",
       };
@@ -59,26 +58,17 @@ export default withRouter(
                   Superheroes
                 </Button>
               </div>
-
-              {/* <div className="row">
-                <Button
-                  onClick={this.selectTheme("create")}
-                  className="create-button"
-                >
-                  Create
-                </Button>
-              </div>
-
-              <div className="row">
-                <Button
-                  onClick={this.selectTheme("random")}
-                  className="random-button"
-                >
-                  Random
-                </Button>/
-              </div> */}
             </div>
           )}
+          <div className="ball d-flex justify-content-center mt-5">
+            <div className="outer-circle">
+              <div className="inner-circle d-flex justify-content-center align-items-center"></div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
       );
     }

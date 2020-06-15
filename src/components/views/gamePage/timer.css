@@ -8,6 +8,20 @@
   font-family: "Megrim", cursive;
   font-size: 1.5rem;
 }
+
+@media only screen and (max-width: 600px) {
+  #box {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 75px;
+    color: white;
+    font-family: "Megrim", cursive;
+    font-size: 20px;
+  }
+}
+
 .gradient-border {
   --borderWidth: 3px;
   background: #1d1f20;

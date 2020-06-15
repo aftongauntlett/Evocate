@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Card";
 import "./Board.css";
-import Timer from '../views/gamePage/timer'
-import GameOver from '../views/gameOver'
+import Timer from "../views/gamePage/timer";
+import GameOver from "../views/gameOver";
 
 const Board = (props) => {
   const [cards, setCards] = useState(props.cards);
   const [cardCount, setCardCount] = useState(props.cardCount);
-  const [finalTime, setTime] = useState([]);
+  const [finalTime, setTime] = useState(0);
 
   const [checkers, setCheckers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -39,7 +39,7 @@ const Board = (props) => {
     }
   };
   const setFinalTime = function (time) {
-    setTime(time)
+    setTime(time);
   };
 
   useEffect(() => {
@@ -54,56 +54,48 @@ const Board = (props) => {
         };
         newCards.push(newCard);
       });
-      console.log(newCards)
+      console.log(newCards);
 
       setCards(newCards);
     }
     // eslint-disable-next-line
   }, [checkers, completed]);
 
-
   return (
     <div className="container">
-      {/* {loading && (
-        <div className="spinner">
-          <div>
-            <img src={spinner} />
-          </div>
-          <span>Loading game...</span>
-        </div>
-      )} */}
-
       {loading && (
         <>
-          {/* <div key="stats"> */}
-          {/* <div class="row"> */}
-            <div class="row">
-              <Timer running={completed.length != cardCount / 2} setFinalTime={setFinalTime.bind(this)} />
-            </div>
-            <div class="row" style={{ color: "white" }}>final time   {finalTime} total cards: {cardCount}: completed sets:{completed.length}</div>
-          {/* </div> */}
-          {/* </div> */}
-          {/* <div className="statistics">
-            <span>Turns: {turns}</span>
-            <span>Pairs: {pairsMatched} of {pairs}</span>
-
-            {pairsMatched === pairs && (
-              <button onClick={resetGame}>New game</button>
-            )}
-          </div> */}
+          <div className="row">
+            <Timer
+              running={completed.length != cardCount / 2}
+              setFinalTime={setFinalTime.bind(this)}
+            />
+          </div>
+          <div className="d-flex justify-content-around cardCount row mt-3">
+            <div className="mt-3">Total Sets: {cardCount}</div>
+            <div className="mt-3">Completed Sets: {completed.length}</div>
+          </div>
+          {/* {completed.length === 0 && ( */}
           {completed.length == cardCount / 2 && (
-            <div class="row">
+            <div className="row">
               <GameOver difficulty={cardCount} score={finalTime} />
             </div>
-          )}
+          )}{" "}
+          {completed.length == cardCount / 2 && <div class="row"></div>}
           {completed.length != cardCount / 2 && (
             <div className="row">
-              <div class="d-flex justify-content-center">
-                {cards && cards.length > 0 && cards.map((card) => (
-                  <div className="col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center my-5">
-                    <Card {...card} onClick={onCardClick(card)} key={card.id} />
-                  </div>
-                ))}
+              <div className="d-flex justify-content-center flex-wrap">
+                {cards &&
+                  cards.length > 0 &&
+                  cards.map((card) => (
+                    <div className="col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-center my-5">
+                      <Card
+                        {...card}
+                        onClick={onCardClick(card)}
+                        key={card.id}
+                      />
+                    </div>
+                  ))}
               </div>
             </div>
           )}
