@@ -72,7 +72,7 @@ const Board = (props) => {
             />
           </div>
           <div className="d-flex justify-content-around cardCount row mt-3">
-            <div className="mt-3">Total Sets: {cardCount}</div>
+            <div className="mt-3">Total Cards: {cardCount}</div>
             <div className="mt-3">Completed Sets: {completed.length}</div>
           </div>
           {/* {completed.length === 0 && ( */}

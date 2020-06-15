@@ -5,7 +5,7 @@
 
 **Github:** [View the Github Repo here](https://github.com/aftongauntlett/Evocate)
 
-**Deployed:** [View the Game Live here]()
+**Deployed:** [View the Game Live here](https://aftongauntlett.github.io/evocate-public/#/)
 
 **Trello:** [View our Trello Board here](https://docs.google.com/presentation/d/15NUO1nKsMYdAS6-0oP00azgbQMNjGoEWI1Kk-GIz70E/edit?usp=sharing)
 
@@ -27,7 +27,9 @@ Evocate is a basic game built to test the player's memory. In a deck of paired c
 
 ## Screenshot
 
-Coming Soon.
+![image](https://i.imgur.com/iiLydBn.jpg)
+![image](https://i.imgur.com/0HNXMAY.jpg)
+![image](https://i.imgur.com/KHJZKF2.jpg)
 
 ## License
 
