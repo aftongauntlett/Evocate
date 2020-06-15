@@ -27,6 +27,16 @@ Evocate is a basic game built to test the player's memory. In a deck of paired c
 - JavaScript
 - API
 
+
+## Collaborators
+
+[Johnny Liang](https://github.com/JuncongLiang)
+
+[Mariana Barnett](https://github.com/maribarnett3)
+
+[Jenelle Langford](https://github.com/jenellelangford)
+
+
 ## Screenshot
 
 ![image](https://i.imgur.com/iiLydBn.jpg)
